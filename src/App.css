@@ -1,38 +1,72 @@
+/* App.css */
 .App {
-  text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+	text-align: center;
+	font-size: 36px;
+	color: #333;
+	margin-bottom: 10px;
+	font-family: 'Pacifico', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.winner-message {
+	font-size: 24px;
+	color: #db6d14;
+	font-family: 'Pacifico', cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.current-player {
+	font-size: 24px;
+	color: #f39821;
+	font-family: 'Pacifico', cursive;
 }
 
-.App-link {
-  color: #61dafb;
+.board {
+	display: grid;
+	grid-template-columns: repeat(3, 100px);
+	gap: 0.5rem;
+	margin: 20px;
+	background-color: #000000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 5rem;
+	font-size: 36px;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.cell.X {
+	color: #f44336;
+	font-family: 'Raleway', sans-serif;
+}
+
+.cell.O {
+	color: #2196f3;
+	font-family: 'Raleway', sans-serif;
+}
+
+.reset-button {
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: #f09b3b; /* Green color for the reset button */
+	color: #fff;
+	font-size: 1.6rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	font-family: 'Pacifico', cursive;
+}
+
+.reset-button:hover {
+	background-color: #e08610; /* Slightly darker green on hover */
 }
